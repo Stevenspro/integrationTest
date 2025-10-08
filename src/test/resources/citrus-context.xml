@@ -26,6 +26,18 @@
                         content-type="application/json"
                         timeout="60000"/>
 
+    <citrus-http:client id="organisationHttpClient"
+                        request-url="http://localhost:8080/club/Organisation/create"
+                        request-method="POST"
+                        content-type="application/json"
+                        timeout="60000"/>
+
+    <citrus-http:client id="associationHttpClient"
+                        request-url="http://localhost:8080/club/association/create"
+                        request-method="POST"
+                        content-type="application/json"
+                        timeout="60000"/>
+
 
     <!-- Enable property placeholder resolution for variable substitution -->
     <context:property-placeholder location="classpath:application.properties"/>
