@@ -1,0 +1,11 @@
+{
+  "firstName": "steve",
+  "lastName": "tester",
+  "email": "steve@testerq.com",
+  "streetName": "Freistr",
+  "userRole": 1,
+  "streetNumber": 4,
+  "zipCode": 45145,
+  "city": "Essen",
+  "country": "Germany"
+}
