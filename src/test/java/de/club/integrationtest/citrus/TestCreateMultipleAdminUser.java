@@ -23,12 +23,11 @@ public class TestCreateMultipleAdminUser extends TestSupport {
         description("""
                 create multiple users with different roles""");
 
-        createUser("Franck", "Herdt", "Herdt@dne.de", 2);
+        createUser("Franck", "Herdt", "Herdt@dne.de", 3);
         createUser("Patrick", "Bauer", "Bauer@dne.de", 1);
-        createUser("Mark", "Mann", "Mann@dne.de", 3);
+        createUser("Mark", "Mann", "Mann@dne.de", 1);
         createUser("Ariel", "Parr", "Parr@dne.de", 0);
-        createUser("Marcel", "Pils", "Pils@dne.de", 3);
-
+        createUser("Marcel", "Pils", "Pils@dne.de", 0);
     }
 
     private void createUser(String firstName, String lastName, String email, int userRole) {

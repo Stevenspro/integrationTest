@@ -7,5 +7,6 @@
   "streetNumber": 4,
   "zipCode": 45145,
   "city": "Essen",
-  "country": "Germany"
+  "country": "Germany",
+  "creatorId": 1
 }
