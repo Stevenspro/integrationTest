@@ -12,7 +12,7 @@ import static org.citrusframework.validation.json.JsonPathMessageValidationConte
 import static org.citrusframework.validation.xml.XpathMessageValidationContext.Builder.xpath;
 
 
-public class TestCreateMultipleAdminUser extends TestSupport {
+public class TestCreateMultipleUser extends TestSupport {
 
     @Resource
     private UserCreator userCreator;
@@ -26,8 +26,8 @@ public class TestCreateMultipleAdminUser extends TestSupport {
         createUser("Franck", "Herdt", "Herdt@dne.de", 3);
         createUser("Patrick", "Bauer", "Bauer@dne.de", 1);
         createUser("Mark", "Mann", "Mann@dne.de", 1);
-        createUser("Ariel", "Parr", "Parr@dne.de", 0);
-        createUser("Marcel", "Pils", "Pils@dne.de", 0);
+        createUser("Ariel", "Parr", "Parr@dne.de", 2);
+        createUser("Marcel", "Pils", "Pils@dne.de", 4);
     }
 
     private void createUser(String firstName, String lastName, String email, int userRole) {
