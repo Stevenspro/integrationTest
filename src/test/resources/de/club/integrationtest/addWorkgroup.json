@@ -1,0 +1,14 @@
+{
+  "description": "test description",
+  "title": "test title",
+  "duration": 3,
+  "participantCount": 3,
+  "date": "2026-01-01",
+  "duration_from": "2026-01-01",
+  "duration_to": "2026-01-01",
+  "location": "Essen",
+  "price": "34",
+  "Time": "3",
+  "userId": "1",
+  "creatorId": "1"
+}

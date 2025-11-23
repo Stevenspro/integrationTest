@@ -17,13 +17,13 @@ public class TestCreationMultipleOrganisation extends TestSupport {
         description("""
                 create multiple Organisation""");
 
-        createOrganisation ("VKII","dortmundstr","Dortmund","Germany",23,45138);
-        createOrganisation ("Sekteur","mainzstr","Mainz","Germany",26,65132);
-        createOrganisation ("SekteurCMR","Apollo Bar","Yaounde","Cameroon",2643,6582);
+        createOrganisation ("VKII","dortmundstr","Dortmund","Germany",23,45138, 1);
+        createOrganisation ("Sekteur","mainzstr","Mainz","Germany",26,65132, 1);
+        createOrganisation ("SekteurCMR","Apollo Bar","Yaounde","Cameroon",2643,6582, 1);
     }
 
     private void createOrganisation(String organisationName, String streetName,
-                            String city, String country, int streetNumber, int zipCode) {
+                                    String city, String country, int streetNumber, int zipCode, long creatorId) {
         run(createVariable("organisationName", organisationName));
         run(createVariable("streetName", streetName));
         run(createVariable("city", city));

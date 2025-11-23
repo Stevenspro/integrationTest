@@ -8,5 +8,7 @@
   "zipCode": 45145,
   "city": "Essen",
   "country": "Germany",
-  "creatorId": 1
+  "creatorId": 1,
+  "associationName": "VKII-ruhrgebiet",
+  "organisationName": "VKII"
 }

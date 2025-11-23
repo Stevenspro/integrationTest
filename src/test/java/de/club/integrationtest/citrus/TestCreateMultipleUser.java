@@ -18,24 +18,62 @@ public class TestCreateMultipleUser extends TestSupport {
     private UserCreator userCreator;
 
     @CitrusTest
+    public void createMultipleSuperAdminUser() {
+        author("Steve");
+        description("""
+                create multiple users with different roles""");
+
+        createUser("Marcel", "Pils", "Pils@dne.de", 4, 1);
+    }
+
+    @CitrusTest
+    public void createMultipleAdminUser() {
+        author("Steve");
+        description("""
+                create multiple users with different roles""");
+
+        createUser("Franck", "Herdt", "Herdt@dne.de", 3, 1);
+    }
+
+    @CitrusTest
+    public void createMultipleManager() {
+        author("Steve");
+        description("""
+                create multiple users with different roles""");
+
+        createUser("Ariel", "Parr", "Parr@dne.de", 2, 1);
+    }
+
+    @CitrusTest
+    public void createMultipleUser() {
+        author("Steve");
+        description("""
+                create multiple users with different roles""");
+
+        createUser("Patrick", "Bauer", "Bauer@dne.de", 1, 1);
+        createUser("Mark", "Mann", "Mann@dne.de", 1, 1);
+    }
+
+    @CitrusTest
     public void createMultipleUserWithDifferentRole() {
         author("Steve");
         description("""
                 create multiple users with different roles""");
 
-        createUser("Franck", "Herdt", "Herdt@dne.de", 3);
-        createUser("Patrick", "Bauer", "Bauer@dne.de", 1);
-        createUser("Mark", "Mann", "Mann@dne.de", 1);
-        createUser("Ariel", "Parr", "Parr@dne.de", 2);
-        createUser("Marcel", "Pils", "Pils@dne.de", 4);
+        createUser("Franck", "Herdt", "Herdt@dne.de", 3, 1);
+        createUser("Patrick", "Bauer", "Bauer@dne.de", 1, 1);
+        createUser("Mark", "Mann", "Mann@dne.de", 1, 1);
+        createUser("Ariel", "Parr", "Parr@dne.de", 2, 1);
+        createUser("Marcel", "Pils", "Pils@dne.de", 4, 1);
     }
 
-    private void createUser(String firstName, String lastName, String email, int userRole) {
+    private void createUser(String firstName, String lastName, String email, int userRole, long creatorId) {
 
         run(createVariable("firstName", firstName));
         run(createVariable("lastName", lastName));
         run(createVariable("email", email));
         run(createVariable("userRole", userRole));
+        run(createVariable("creatorId", creatorId));
 
         run(http().client("helloHttpClient").send().post()
                 .message().type(MessageType.JSON)
@@ -46,6 +84,7 @@ public class TestCreateMultipleUser extends TestSupport {
                         .expression("$.lastName", "${lastName}")
                         .expression("$.email", "${email}")
                         .expression("$.userRole", "${userRole}")
+                        .expression("$.creatorId", "${creatorId}")
                 ));
 
         run(http().client("helloHttpClient").receive().response(HttpStatus.OK)

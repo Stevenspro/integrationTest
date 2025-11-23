@@ -43,6 +43,12 @@
                         request-method="POST"
                         content-type="application/json"
                         timeout="60000"/>
+    <citrus-http:client id="workgroupHttpClient"
+                        request-url="http://localhost:8081/club/workgroup"
+                        request-method="POST"
+                        content-type="application/json"
+                        timeout="60000"/>
+
 
     <citrus-http:client id="requestHttpClient"
                         request-url="http://localhost:8080/club/Request/add"
