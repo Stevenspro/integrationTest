@@ -17,6 +17,23 @@ public class TestCreateMultipleUser extends TestSupport {
     @Resource
     private UserCreator userCreator;
 
+
+
+
+    @CitrusTest
+    public void te() {
+        author("Steve");
+        description("""
+                create multiple users with different roles""");
+
+        userCreator.createUser(this,"Marcelrre", "Pilse", "Pilsrere@dne.de", 4, 1);
+    }
+
+
+
+
+
+
     @CitrusTest
     public void createMultipleSuperAdminUser() {
         author("Steve");

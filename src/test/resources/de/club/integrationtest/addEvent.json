@@ -1,9 +1,19 @@
 {
-  "description": "test description",
-  "title": "test title",
-  "duration": 3,
-  "date": "2026-01-01",
-  "location": "Essen",
-  "price": "34",
-  "creatorId": "1"
+  "title": "Customer Success Summit",
+  "description": "Learn best practices for customer success and retention.",
+  "category": "SUMMIT",
+  "date": "2024-05-10",
+  "time": "08:00",
+  "endDate": "2024-05-11",
+  "endTime": "18:00",
+  "starDate": "2024-05-11",
+  "startTime": "18:00",
+  "location": "Business Center Downtown",
+  "organizer": "Customer Success Team",
+  "status": "upcoming",
+  "maxAttendees": 300,
+  "currentAttendees": 156,
+  "price": 199.0,
+  "image": null,
+  "tags": ["customer-success", "summit", "training"]
 }

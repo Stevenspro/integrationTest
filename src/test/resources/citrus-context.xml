@@ -27,7 +27,7 @@
                         timeout="60000"/>
 
     <citrus-http:client id="organisationHttpClient"
-                        request-url="http://localhost:8080/club/Organisation/create"
+                        request-url="http://localhost:8080/club/organisation/create"
                         request-method="POST"
                         content-type="application/json"
                         timeout="60000"/>
