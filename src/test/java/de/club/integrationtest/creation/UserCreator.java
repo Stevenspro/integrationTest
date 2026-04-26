@@ -1,7 +1,6 @@
 package de.club.integrationtest.creation;
 
 import org.citrusframework.TestActionRunner;
-import org.citrusframework.http.security.User;
 import org.citrusframework.message.MessageType;
 import org.citrusframework.spi.Resources;
 import org.springframework.http.HttpStatus;

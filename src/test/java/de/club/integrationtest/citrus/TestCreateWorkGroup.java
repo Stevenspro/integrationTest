@@ -42,11 +42,10 @@ public class TestCreateWorkGroup extends TestSupport {
                 .process(jsonPath()
                         .expression("$.description", "${description}")
                         .expression("$.title", "${title}")
-                        .expression("$.duration", "${duration}")
                         .expression("$.date", "${date}")
                         .expression("$.location", "${location}")
                         .expression("$.price", "${price}")
-                        .expression("$.creatorId", "${creatorId}")
+                        .expression("$.organizer", "${creatorId}")
                 ));
 
         run(http().client("workgroupHttpClient").receive().response(HttpStatus.OK)

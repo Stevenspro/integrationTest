@@ -1,14 +1,13 @@
 {
   "description": "test description",
   "title": "test title",
-  "duration": 3,
-  "participantCount": 3,
+  "maxAttendees": 32,
   "date": "2026-01-01",
-  "duration_from": "2026-01-01",
-  "duration_to": "2026-01-01",
   "location": "Essen",
-  "price": "34",
-  "Time": "3",
   "userId": "1",
-  "creatorId": "1"
+  "price": 199.0,
+  "organizer": "1",
+  "status": "ONGOING",
+  "startDate": "2024-05-11",
+  "endDate": "2024-05-11"
 }

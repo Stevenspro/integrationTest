@@ -51,7 +51,7 @@
 
 
     <citrus-http:client id="requestHttpClient"
-                        request-url="http://localhost:8080/club/Request/add"
+                        request-url="http://localhost:8080/club/Request/create"
                         request-method="POST"
                         content-type="application/json"
                         timeout="60000"/>
